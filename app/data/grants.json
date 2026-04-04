@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "title": "Solana DeFi Grant",
+    "description": "For lending and borrowing protocols building on Solana. Requires working MVP and clear path to mainnet.",
+    "category": "DeFi",
+    "ecosystem": "Solana",
+    "stage": "MVP",
+    "funding": "$50,000",
+    "eligibility": "Open to teams with at least one technical founder. Project must be open source.",
+    "applyUrl": "https://solana.com/grants"
+  },
+  {
+    "id": "2",
+    "title": "Polygon Gaming Accelerator",
+    "description": "12-week accelerator for Web3 gaming projects. Includes mentorship, funding, and demo day.",
+    "category": "Gaming",
+    "ecosystem": "Polygon",
+    "stage": "Prototype",
+    "funding": "$100,000 + mentorship",
+    "eligibility": "Games with playable prototype. Team must commit to building on Polygon.",
+    "applyUrl": "https://polygon.technology/gaming"
+  },
+  {
+    "id": "3",
+    "title": "Ethereum Foundation Academic Grant",
+    "description": "Support for research and infrastructure projects that advance Ethereum. Ideal for academic teams.",
+    "category": "Infrastructure",
+    "ecosystem": "Ethereum",
+    "stage": "Idea",
+    "funding": "$25,000 - $200,000",
+    "eligibility": "Academic institutions or research teams. Open source required.",
+    "applyUrl": "https://ethereum.foundation/grants"
+  },
+  {
+    "id": "4",
+    "title": "BNB Chain Builder Grant",
+    "description": "Funding for dApps, tools, and infrastructure on BNB Chain. Rolling applications.",
+    "category": "General",
+    "ecosystem": "BNB Chain",
+    "stage": "MVP",
+    "funding": "$30,000",
+    "eligibility": "Any project building on BNB Chain. Must pass basic KYC.",
+    "applyUrl": "https://bnbchain.org/grants"
+  },
+  {
+    "id": "5",
+    "title": "Avalanche Rush Fund",
+    "description": "Liquidity and development grants for DeFi protocols launching on Avalanche C-Chain.",
+    "category": "DeFi",
+    "ecosystem": "Avalanche",
+    "stage": "Live",
+    "funding": "$250,000",
+    "eligibility": "Established DeFi teams with existing TVL. Matching funds required.",
+    "applyUrl": "https://avax.network/rush"
+  },
+  {
+    "id": "6",
+    "title": "Chainlink BUILD",
+    "description": "For projects integrating Chainlink oracles. Includes technical support and go-to-market help.",
+    "category": "Infrastructure",
+    "ecosystem": "Multichain",
+    "stage": "MVP",
+    "funding": "$50,000 + resources",
+    "eligibility": "Projects actively using or planning to use Chainlink services.",
+    "applyUrl": "https://chain.link/build"
+  }
+]
