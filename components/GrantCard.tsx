@@ -11,9 +11,11 @@ interface GrantCardProps {
     stage: string;
     funding: string;
   };
+  toggleSave: (id:string) => void;
+  saved?: boolean;
 }
 
-const GrantCard = ({ grant }: GrantCardProps) => {
+const GrantCard = ({ grant , toggleSave, saved}: GrantCardProps) => {
   const getIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'defi': return <Wallet className="w-5 h-5" />;
@@ -57,12 +59,31 @@ const GrantCard = ({ grant }: GrantCardProps) => {
             <span className="text-sm font-bold text-gray-900">{grant.funding}</span>
           </div>
           
-          <Link
-            href={`/grants/${grant.id}`}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"
-          >
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div style={{ display: 'flex', justifyContent: 'space-around', width: '30%' }}>
+            <button onClick={() => toggleSave?.(grant.id)} 
+              className={`
+              inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm
+                ${saved
+                  ? "bg-primary text-white"
+                  : "bg-gray-50 text-gray-400 group-hover:bg-primary group-hover:text-white"
+                }
+              `}
+              title={saved ? "saved" : "save" }
+            >
+               <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+                fill="currentColor" viewBox="0 0 24 24" >
+                {/* <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free--> */}
+                <path d="M18 2H6c-1.1 0-2 .9-2 2v17c0 .36.19.69.5.87s.69.18 1 0l6.5-3.72 6.5 3.72c.15.09.32.13.5.13s.35-.04.5-.13c.31-.18.5-.51.5-.87V4c0-1.1-.9-2-2-2m0 8v9.28l-5.5-3.14a.98.98 0 0 0-.99 0l-5.5 3.14V4h12v6Z"></path>
+                </svg>
+             </button>
+
+            <Link
+              href={`/grants/${grant.id}`}
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-400 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

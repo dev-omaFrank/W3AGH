@@ -1,8 +1,34 @@
+"use client";
+
 import grants from '@/app/data/grants.json';
 import GrantCard from '@/components/GrantCard';
 import { Search, Filter } from 'lucide-react';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import { useState } from 'react';
+
 
 export default function GrantsPage() {
+  const [savedGrants, setSavedGrants] = useLocalStorage<string[]>(
+    "savedGrants",
+    []
+  );
+
+  const [toast, setToast] = useState<string | null>(null);
+
+  const toggleSave = (id: string) => {
+    setSavedGrants((prev) => {
+      const isSaved = prev.includes(id);
+
+      setToast(isSaved ? "Removed from saved" : "Saved to favorites 🔥");
+
+      return isSaved
+        ? prev.filter((g) => g !== id)
+        : [...prev, id];
+    });
+
+    setTimeout(() => setToast(null), 2000);
+  };
+
   return (
     <div className="bg-white min-h-screen py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +78,7 @@ export default function GrantsPage() {
         {/* Grants Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {grants.map((grant) => (
-            <GrantCard key={grant.id} grant={grant} />
+            <GrantCard key={grant.id} grant={grant} toggleSave={toggleSave} saved={savedGrants.includes(grant.id)}/>
           ))}
         </div>
 
@@ -67,6 +93,11 @@ export default function GrantsPage() {
           </div>
         )}
       </div>
+      {toast && (
+        <div className="fixed bottom-6 right-6 bg-gray-900 text-white px-4 py-3 rounded-xl shadow-lg text-sm font-medium animate-fade-in">
+          {toast}
+        </div>
+      )}
     </div>
   );
 }
