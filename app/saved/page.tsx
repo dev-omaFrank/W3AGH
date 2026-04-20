@@ -5,17 +5,21 @@ import GrantCard from "@/components/GrantCard";
 import { Search, Filter } from "lucide-react";
 import { useState, useEffect, useMemo } from "react";
 import type { Grant } from "@/types/grant"; // (recommended type)
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export default function SavedGrantsPage() {
-  const [savedIds, setSavedIds] = useState<string[]>([]);
+  const [savedIds, setSavedIds] = useLocalStorage<string[]>(
+    "savedGrants",
+    []
+  );
 
   // Load saved IDs from localStorage
-  useEffect(() => {
-    const ids: string[] = JSON.parse(
-      localStorage.getItem("savedGrants") || "[]"
-    );
-    setSavedIds(ids);
-  }, []);
+  // useEffect(() => {
+  //   const ids: string[] = JSON.parse(
+  //     localStorage.getItem("savedGrants") || "[]"
+  //   );
+  //   setSavedIds(ids);
+  // }, []);
 
   // Derive saved grants from IDs (no extra state needed)
   const savedGrants = useMemo(() => {
