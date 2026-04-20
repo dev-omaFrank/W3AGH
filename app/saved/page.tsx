@@ -4,7 +4,7 @@ import grantsData from "@/app/data/grants.json";
 import GrantCard from "@/components/GrantCard";
 import { Search, Filter } from "lucide-react";
 import { useState, useEffect, useMemo } from "react";
-import type { Grant } from "@/types/grant"; // (recommended type)
+import grants from "@/app/data/grants.json";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export default function SavedGrantsPage() {
