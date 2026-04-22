@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
   return (
@@ -21,12 +22,28 @@ const Navbar = () => {
             >
               Home
             </Link>
+
             <Link
               href="/grants"
               className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
             >
-              Browse Grants
+              Browse 
             </Link>
+
+            <Link
+              href="/saved"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              Saved 
+            </Link>
+
+            <Link
+              href="/match"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              Match 
+            </Link>
+
             <Link
               href="/grants"
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-md hover:shadow-lg active:scale-95"
@@ -36,9 +53,7 @@ const Navbar = () => {
           </div>
 
           <div className="sm:hidden">
-            <Link href="/grants" className="text-primary font-semibold text-sm">
-              Explore
-            </Link>
+            <MobileMenu />
           </div>
         </div>
       </div>
