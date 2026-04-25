@@ -59,11 +59,7 @@ const MatchPage: React.FC = () => {
             return;
         }
 
-        // Simulate API call
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate network delay
-            console.log('Form Data Submitted:', formData);
-            // In a real application, you would send this data to an API
             const response = await fetch("/api/match", {
                 method: "POST",
                 headers: {

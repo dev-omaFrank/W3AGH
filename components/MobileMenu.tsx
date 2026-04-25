@@ -27,7 +27,7 @@ export default function MobileMenu() {
 
       {/* Slide-in Menu */}
       <div
-         className={`fixed top-0 right-0 h-full w-64 bg-blue shadow-lg z-50 transform transition-transform duration-300 ${
+         className={`fixed top-0 right-0 h-full w-64 max-w-full bg-blue shadow-lg z-50 transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full opacity-0 pointer-events-none"
         }`}
       >

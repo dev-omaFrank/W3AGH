@@ -2,12 +2,14 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, ExternalLink, DollarSign, Target, Briefcase, ShieldCheck, Clock, Globe } from 'lucide-react';
 import grants from '@/app/data/grants.json';
+import ChatBubble from '@/components/ChatBubble';
 
 interface GrantDetailPageProps {
   params: {
     id: string;
   };
 }
+
 
 export async function generateStaticParams() {
   return grants.map((grant) => ({
@@ -23,7 +25,7 @@ export default function GrantDetailPage({ params }: GrantDetailPageProps) {
   }
 
   return (
-    <div className="bg-white min-h-screen py-16 sm:py-24">
+    <div className="bg-white min-h-screen py-16 sm:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Link */}
         <Link
@@ -148,6 +150,15 @@ export default function GrantDetailPage({ params }: GrantDetailPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Chat Bubble Component */}
+      <ChatBubble grantContext={{
+        title: grant.title,
+        description: grant.description,
+        category: grant.category,
+        ecosystem: grant.ecosystem,
+        funding: grant.funding
+      }} />
     </div>
   );
 }
