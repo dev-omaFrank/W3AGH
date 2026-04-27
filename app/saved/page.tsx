@@ -13,13 +13,6 @@ export default function SavedGrantsPage() {
     []
   );
 
-  // Load saved IDs from localStorage
-  // useEffect(() => {
-  //   const ids: string[] = JSON.parse(
-  //     localStorage.getItem("savedGrants") || "[]"
-  //   );
-  //   setSavedIds(ids);
-  // }, []);
 
   // Derive saved grants from IDs (no extra state needed)
   const savedGrants = useMemo(() => {
