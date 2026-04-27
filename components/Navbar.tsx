@@ -48,7 +48,7 @@ const Navbar = () => {
               href="/audit"
               className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
             >
-              Audit Your Smart Contract 
+              Audit Smart Contract 
             </Link>
 
             <Link
@@ -56,6 +56,13 @@ const Navbar = () => {
               className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
             >
               News Updates 
+            </Link>
+
+            <Link
+              href="/chat"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              AI Bot
             </Link>
 
             <Link
