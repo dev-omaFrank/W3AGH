@@ -63,6 +63,20 @@ export default function MobileMenu() {
           >
             Find a Match
           </Link>
+
+          <Link
+              href="/audit"
+              className="black  font-semibold text-base"
+            >
+              Audit Your Smart Contract 
+            </Link>
+
+            <Link
+              href="/news"
+              className="black  font-semibold text-base"
+            >
+              News Updates 
+            </Link>
         </div>
       </div>
     </div>

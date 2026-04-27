@@ -45,6 +45,20 @@ const Navbar = () => {
             </Link>
 
             <Link
+              href="/audit"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              Audit Your Smart Contract 
+            </Link>
+
+            <Link
+              href="/news"
+              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors"
+            >
+              News Updates 
+            </Link>
+
+            <Link
               href="/grants"
               className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-md hover:shadow-lg active:scale-95"
             >
