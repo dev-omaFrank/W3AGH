@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
 
     
     const grantInfo = `
-        Title: ${title}
+        Name: ${title}
         Description: ${description}
         Category: ${category}
         Ecosystem: ${ecosystem}
