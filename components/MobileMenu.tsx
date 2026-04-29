@@ -52,14 +52,13 @@ export default function MobileMenu() {
           isOpen ? "translate-x-0" : "translate-x-full opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col p-6 space-y-6" style={{ backgroundColor: '#0000ff36' }}>
+        <div className="flex flex-col p-6 space-y-6" style={{ backgroundColor: '#b2b2b2' }}>
           <Link href="/" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Home</Link>
           <Link href="/grants" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Explore</Link>
           <Link href="/saved" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Saved Grants</Link>
           <Link href="/match" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Find a Match</Link>
           <Link href="/audit" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Audit Your Smart Contract</Link>
           <Link href="/news" onClick={() => setIsOpen(false)} className="black font-semibold text-base">News Updates</Link>
-          <Link href="/chat" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Chat with AI</Link>
         </div>
       </div>
     </div>
