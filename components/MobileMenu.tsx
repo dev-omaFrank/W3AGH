@@ -58,6 +58,7 @@ export default function MobileMenu() {
           <Link href="/saved" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Saved Grants</Link>
           <Link href="/match" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Find a Match</Link>
           <Link href="/audit" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Audit Your Smart Contract</Link>
+          <Link href="/chat" onClick={() => setIsOpen(false)} className="black font-semibold text-base">Chat with AI</Link>
           <Link href="/news" onClick={() => setIsOpen(false)} className="black font-semibold text-base">News Updates</Link>
         </div>
       </div>
